@@ -23,7 +23,7 @@
 		59B383A62532058300EA3E20 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B383992532058300EA3E20 /* ResultViewController.swift */; };
 		59B383A72532058300EA3E20 /* ResultViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B3839A2532058300EA3E20 /* ResultViewController.storyboard */; };
 		59B383A82532058300EA3E20 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B3839C2532058300EA3E20 /* HistoryView.swift */; };
-		59B383A92532058300EA3E20 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B3839F2532058300EA3E20 /* TopViewModel.swift */; };
+		59B383A92532058300EA3E20 /* TopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B3839F2532058300EA3E20 /* TopPresenter.swift */; };
 		59B383AA2532058300EA3E20 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B383A12532058300EA3E20 /* ResultViewModel.swift */; };
 		59B383AB2532058300EA3E20 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B383A32532058300EA3E20 /* HistoryViewModel.swift */; };
 		78A8AADFB5AE297B9EA367B5 /* Pods_TodaysInabaMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8476D47B23FB11868057FB /* Pods_TodaysInabaMVP.framework */; };
@@ -72,7 +72,7 @@
 		59B383992532058300EA3E20 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		59B3839A2532058300EA3E20 /* ResultViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResultViewController.storyboard; sourceTree = "<group>"; };
 		59B3839C2532058300EA3E20 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
-		59B3839F2532058300EA3E20 /* TopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
+		59B3839F2532058300EA3E20 /* TopPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPresenter.swift; sourceTree = "<group>"; };
 		59B383A12532058300EA3E20 /* ResultViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		59B383A32532058300EA3E20 /* HistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		61673666E996E98D199351F1 /* Pods-TodaysInabaMVP-TodaysInabaMVPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodaysInabaMVP-TodaysInabaMVPUITests.release.xcconfig"; path = "Target Support Files/Pods-TodaysInabaMVP-TodaysInabaMVPUITests/Pods-TodaysInabaMVP-TodaysInabaMVPUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 		59B3839E2532058300EA3E20 /* Top */ = {
 			isa = PBXGroup;
 			children = (
-				59B3839F2532058300EA3E20 /* TopViewModel.swift */,
+				59B3839F2532058300EA3E20 /* TopPresenter.swift */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -517,7 +517,7 @@
 				59358CB325205E17004E39F7 /* AppDelegate.swift in Sources */,
 				59B383642532048B00EA3E20 /* Extension+Storyboard.swift in Sources */,
 				59B383892532055000EA3E20 /* UserDefaultsModel.swift in Sources */,
-				59B383A92532058300EA3E20 /* TopViewModel.swift in Sources */,
+				59B383A92532058300EA3E20 /* TopPresenter.swift in Sources */,
 				59B3838C2532055000EA3E20 /* API.swift in Sources */,
 				59B383AA2532058300EA3E20 /* ResultViewModel.swift in Sources */,
 				59B383A42532058300EA3E20 /* ViewController.swift in Sources */,
