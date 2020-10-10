@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import RxSwift
-import RxCocoa
 
 class ResultViewModel {
     
@@ -17,7 +15,6 @@ class ResultViewModel {
     let resultImageUrl: String?
     
     init(resultImageUrl: String?) {
-        let disposeBag = DisposeBag()
         
         //output
         self.resultImageUrl = resultImageUrl

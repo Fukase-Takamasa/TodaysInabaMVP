@@ -10,16 +10,12 @@ import Kingfisher
 import SkeletonView
 import Instantiate
 import InstantiateStandard
-import RxSwift
-import RxCocoa
 
 class ResultViewController: UIViewController, StoryboardInstantiatable {
 
-    let disposeBag = DisposeBag()
     var viewModel: ResultViewModel?
         
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var toTopPageButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +29,10 @@ class ResultViewController: UIViewController, StoryboardInstantiatable {
             self.imageView.hideSkeleton()
         })
         
-        //other
-        toTopPageButton.rx.tap
-            .subscribe(onNext: { [weak self] element in
-                self?.dismiss(animated: true, completion: nil)
-            }).disposed(by: disposeBag)
-        
+    }
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
