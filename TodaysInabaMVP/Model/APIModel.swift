@@ -12,7 +12,7 @@ final class APIModel {
     
     private static let provider = MoyaProvider<API>()
     
-    static func getTodaysInabaImages(callBack: @escaping (GoogleData?, MoyaError?) -> Void) {
+    static func getTodaysInabaUrl(callBack: @escaping (String?, MoyaError?) -> Void) {
         provider.request(
             .CustomSearch(
                 query: "稲葉浩志" + ["かっこいい", "かわいい", "眼鏡", "へそ", "97年"].randomElement()!,
@@ -21,7 +21,9 @@ final class APIModel {
             switch result {
             case let .success(moyaResponse):
                 let googleData = try! JSONDecoder().decode(GoogleData.self, from: moyaResponse.data)
-                callBack(googleData, nil)
+                let randomUrl = googleData.items[Int.random(in: 0...9)].link
+
+                callBack(randomUrl, nil)
                 
             case let .failure(error):
                 print(error.localizedDescription)
@@ -29,10 +31,6 @@ final class APIModel {
                 callBack(nil, error)
             }
         }
-    }
-    
-    static func success() {
-        
     }
     
 }

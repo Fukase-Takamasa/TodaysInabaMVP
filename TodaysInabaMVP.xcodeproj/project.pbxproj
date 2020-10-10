@@ -152,7 +152,7 @@
 				59358CB425205E17004E39F7 /* SceneDelegate.swift */,
 				59B383632532048B00EA3E20 /* Extension+Storyboard.swift */,
 				59B383842532055000EA3E20 /* Model */,
-				59B3839D2532058300EA3E20 /* ViewModel */,
+				59B3839D2532058300EA3E20 /* Presenter */,
 				59B383932532058300EA3E20 /* View */,
 				59358CBB25205E17004E39F7 /* Assets.xcassets */,
 				59358CBD25205E17004E39F7 /* LaunchScreen.storyboard */,
@@ -226,14 +226,14 @@
 			path = History;
 			sourceTree = "<group>";
 		};
-		59B3839D2532058300EA3E20 /* ViewModel */ = {
+		59B3839D2532058300EA3E20 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				59B3839E2532058300EA3E20 /* Top */,
 				59B383A02532058300EA3E20 /* Result */,
 				59B383A22532058300EA3E20 /* History */,
 			);
-			path = ViewModel;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		59B3839E2532058300EA3E20 /* Top */ = {
