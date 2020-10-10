@@ -12,16 +12,27 @@ final class APIModel {
     
     private static let provider = MoyaProvider<API>()
     
-//    static func getTodaysInabaImages() -> Observable<GoogleData> {
-//        return provider.rx.request(
-//            .CustomSearch(
-//                query: "稲葉浩志" + ["かっこいい", "かわいい", "眼鏡", "へそ", "97年"].randomElement()!,
-//                startIndex: Int.random(in: 1...10)))
-//            .map { response in
-//
-//                try! JSONDecoder().decode(GoogleData.self, from: response.data)
-//
-//            }.asObservable()
-//    }
+    static func getTodaysInabaImages(callBack: @escaping (GoogleData?, MoyaError?) -> Void) {
+        provider.request(
+            .CustomSearch(
+                query: "稲葉浩志" + ["かっこいい", "かわいい", "眼鏡", "へそ", "97年"].randomElement()!,
+                startIndex: Int.random(in: 1...10)))
+        { result in
+            switch result {
+            case let .success(moyaResponse):
+                let googleData = try! JSONDecoder().decode(GoogleData.self, from: moyaResponse.data)
+                callBack(googleData, nil)
+                
+            case let .failure(error):
+                print(error.localizedDescription)
+                
+                callBack(nil, error)
+            }
+        }
+    }
+    
+    static func success() {
+        
+    }
     
 }
