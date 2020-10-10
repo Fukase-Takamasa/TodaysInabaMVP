@@ -9,7 +9,7 @@ import Foundation
 
 protocol TopPresenterInterface: AnyObject {
     func successResponse(url: String)
-    func errorResponse()
+    func errorResponse(error: Error)
 }
 
 final class TopPresenter {
@@ -29,8 +29,12 @@ final class TopPresenter {
                 //UDに保存
                 UserDefaultsModel.saveUrl(value: response)
                 
+            }else if let error = error {
+                self.listener?.errorResponse(error: error)
+                print("moyaError: \(error)")
+                error
             }else {
-                self.listener?.errorResponse()
+                print("responseとerror両方ともnil")
             }
             
         })

@@ -59,6 +59,8 @@ extension ViewController: UITextFieldDelegate {
         
         if !(nameTextField.text?.isEmpty ?? true) {
             print("名前の入力が完了しました")
+            
+            //PresenterにAPIリクエスト
             presenter?.requestAPI()
         }
         return true
@@ -74,8 +76,13 @@ extension ViewController: TopPresenterInterface {
         self.present(vc, animated: true)
     }
     
-    func errorResponse() {
-        print("vc_error")
+    func errorResponse(error: Error) {
+        let alert = UIAlertController(title: "通信に失敗しました。",
+                                      message: error.localizedDescription,
+                                      preferredStyle: .alert)
+        let ok = UIAlertAction(title: "閉じる", style: .default, handler: nil)
+        alert.addAction(ok)
+        self.present(alert, animated: true)
     }
     
 }
