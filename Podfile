@@ -10,6 +10,8 @@ target 'TodaysInabaMVP' do
   pod 'Kingfisher/SwiftUI'
   pod 'PKHUD'
   pod 'SkeletonView'
+  pod 'Instantiate'
+  pod 'InstantiateStandard'
 
   target 'TodaysInabaMVPTests' do
     inherit! :search_paths

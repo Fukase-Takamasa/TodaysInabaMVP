@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (5.2.2)
+  - Instantiate (4.0.0)
+  - InstantiateStandard (4.0.0):
+    - Instantiate (~> 4.0)
   - Kingfisher/Core (5.14.1)
   - Kingfisher/SwiftUI (5.14.1):
     - Kingfisher/Core
@@ -11,6 +14,8 @@ PODS:
   - SkeletonView (1.8.7)
 
 DEPENDENCIES:
+  - Instantiate
+  - InstantiateStandard
   - Kingfisher/SwiftUI
   - Moya
   - PKHUD
@@ -19,6 +24,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Instantiate
+    - InstantiateStandard
     - Kingfisher
     - Moya
     - PKHUD
@@ -26,11 +33,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Instantiate: 62516e7dde448721c1f5815a9ee7e0669d034d52
+  InstantiateStandard: 18ab1417ba787113350c71a5b2251f0b4448be67
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   SkeletonView: ba5370f41280b2f0a76918bb143c1294232bb4f4
 
-PODFILE CHECKSUM: 99cf68ce29a3edbeadd99ba65e168dd59a215948
+PODFILE CHECKSUM: b969a0f40aa373e6891e1a919cf15ce2bb808c82
 
 COCOAPODS: 1.8.3
