@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TodaysInabaMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="y3F-xl-7Vx">
+                                <rect key="frame" x="40" y="144" width="295" height="608"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本日の稲葉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44P-dR-4oP">
+                                        <rect key="frame" x="60" y="0.0" width="175" height="45.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Uaz-B2-9Ls">
+                                        <rect key="frame" x="60" y="120.33333333333331" width="175" height="118"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="日付" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m6g-qb-9WY">
+                                                <rect key="frame" x="0.0" y="0.0" width="175" height="34"/>
+                                                <color key="backgroundColor" red="0.93726837640000005" green="0.93720704320000003" blue="0.94117814300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.32386934760000002" green="0.66626816990000004" blue="0.70590633150000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="お名前" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uOk-kC-RUS">
+                                                <rect key="frame" x="0.0" y="84" width="175" height="34"/>
+                                                <color key="backgroundColor" red="0.93726837640000005" green="0.93720704320000003" blue="0.94117814300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.32386934760000002" green="0.66626816990000004" blue="0.70590633150000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="118" id="H9Q-EY-9fx"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inaba" translatesAutoresizingMaskIntoConstraints="NO" id="otl-JY-Lzc">
+                                        <rect key="frame" x="0.0" y="313" width="295" height="295"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="otl-JY-Lzc" secondAttribute="height" multiplier="1:1" id="KVc-wU-dys"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Uaz-B2-9Ls" firstAttribute="leading" secondItem="y3F-xl-7Vx" secondAttribute="leading" constant="60" id="NPf-mb-Ek2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uaz-B2-9Ls" secondAttribute="trailing" constant="60" id="bLj-a8-eIV"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ib-Ag-X9Q">
+                                <rect key="frame" x="10" y="64" width="110" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tfo-Cn-VWS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                <state key="normal" title="稲葉の履歴">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4ib-Ag-X9Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="1Br-0c-tvg"/>
+                            <constraint firstItem="y3F-xl-7Vx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="1Gt-ZR-7l3"/>
+                            <constraint firstItem="4ib-Ag-X9Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2kr-n7-cGj"/>
+                            <constraint firstItem="y3F-xl-7Vx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="BKQ-RZ-AKQ"/>
+                            <constraint firstAttribute="trailing" secondItem="y3F-xl-7Vx" secondAttribute="trailing" constant="40" id="fgD-TX-KY0"/>
+                            <constraint firstAttribute="bottom" secondItem="y3F-xl-7Vx" secondAttribute="bottom" constant="60" id="xdF-rz-frE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateTextField" destination="m6g-qb-9WY" id="byn-nR-KiT"/>
+                        <outlet property="historyBotton" destination="4ib-Ag-X9Q" id="dIJ-ww-eEq"/>
+                        <outlet property="nameTextField" destination="uOk-kC-RUS" id="k1L-bH-se4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="106"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="inaba" width="600" height="480"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

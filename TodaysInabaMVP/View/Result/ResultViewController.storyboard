@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iw8-e6-nPN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Result View Controller-->
+        <scene sceneID="nML-SL-oG0">
+            <objects>
+                <viewController id="iw8-e6-nPN" customClass="ResultViewController" customModule="TodaysInabaMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WU8-rU-YIl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lnf-xj-HEk">
+                                <rect key="frame" x="20" y="184" width="374" height="538"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ux-NV-Pwe">
+                                        <rect key="frame" x="0.0" y="119" width="374" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="Uoo-w6-5Kh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本日の稲葉は こちら！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlL-6O-qNm">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="119"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG4-aR-GiX">
+                                        <rect key="frame" x="0.0" y="419" width="374" height="119"/>
+                                        <state key="normal" title="もう一度あそぶ"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="2Ux-NV-Pwe" firstAttribute="leading" secondItem="Lnf-xj-HEk" secondAttribute="leading" id="4g2-B7-Ibk"/>
+                                    <constraint firstItem="SlL-6O-qNm" firstAttribute="leading" secondItem="Lnf-xj-HEk" secondAttribute="leading" id="6nk-zk-EcW"/>
+                                    <constraint firstItem="zG4-aR-GiX" firstAttribute="top" secondItem="2Ux-NV-Pwe" secondAttribute="bottom" id="91j-Eq-Dp8"/>
+                                    <constraint firstItem="2Ux-NV-Pwe" firstAttribute="top" secondItem="SlL-6O-qNm" secondAttribute="bottom" id="Ky0-Fz-NLk"/>
+                                    <constraint firstAttribute="trailing" secondItem="zG4-aR-GiX" secondAttribute="trailing" id="NTH-Rr-7Wo"/>
+                                    <constraint firstAttribute="trailing" secondItem="SlL-6O-qNm" secondAttribute="trailing" id="PEy-Es-qeP"/>
+                                    <constraint firstItem="2Ux-NV-Pwe" firstAttribute="centerX" secondItem="Lnf-xj-HEk" secondAttribute="centerX" id="Sqb-f3-uld"/>
+                                    <constraint firstAttribute="bottom" secondItem="zG4-aR-GiX" secondAttribute="bottom" id="cJh-fZ-tXN"/>
+                                    <constraint firstItem="zG4-aR-GiX" firstAttribute="leading" secondItem="Lnf-xj-HEk" secondAttribute="leading" id="ffh-VF-OJ2"/>
+                                    <constraint firstItem="SlL-6O-qNm" firstAttribute="top" secondItem="Lnf-xj-HEk" secondAttribute="top" id="jIW-Z0-RzZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Ux-NV-Pwe" secondAttribute="trailing" id="nfO-Ob-d09"/>
+                                    <constraint firstItem="2Ux-NV-Pwe" firstAttribute="centerY" secondItem="Lnf-xj-HEk" secondAttribute="centerY" id="qxk-lp-s7N"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="10" height="-10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="raa-Y1-1Ie"/>
+                        <constraints>
+                            <constraint firstItem="raa-Y1-1Ie" firstAttribute="trailing" secondItem="Lnf-xj-HEk" secondAttribute="trailing" constant="20" id="bBf-N1-Heb"/>
+                            <constraint firstItem="raa-Y1-1Ie" firstAttribute="bottom" secondItem="Lnf-xj-HEk" secondAttribute="bottom" constant="140" id="gFg-xO-2Cj"/>
+                            <constraint firstItem="Lnf-xj-HEk" firstAttribute="top" secondItem="raa-Y1-1Ie" secondAttribute="top" constant="140" id="hD4-NM-bnD"/>
+                            <constraint firstItem="Lnf-xj-HEk" firstAttribute="leading" secondItem="raa-Y1-1Ie" secondAttribute="leading" constant="20" id="zlq-a9-nPy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="T2q-rE-rjg"/>
+                    <connections>
+                        <outlet property="imageView" destination="2Ux-NV-Pwe" id="GXd-rN-U1O"/>
+                        <outlet property="toTopPageButton" destination="zG4-aR-GiX" id="KoL-qQ-73v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gml-Br-7ec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.75362318840587" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
