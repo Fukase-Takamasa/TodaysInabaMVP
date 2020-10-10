@@ -85,4 +85,8 @@ extension ViewController: TopPresenterInterface {
         self.present(alert, animated: true)
     }
     
+    func isFetching(_ flag : Bool) {
+        flag ? HUD.show(.progress) : HUD.hide()
+    }
+    
 }

@@ -10,6 +10,7 @@ import Foundation
 protocol TopPresenterInterface: AnyObject {
     func successResponse(url: String)
     func errorResponse(error: Error)
+    func isFetching(_ flag : Bool)
 }
 
 final class TopPresenter {
@@ -22,7 +23,13 @@ final class TopPresenter {
     
     func requestAPI() {
         
+        //インジケーター表示開始トリガー
+        listener?.isFetching(true)
+        
         APIModel.getTodaysInabaUrl(callBack: { (response, error) in
+            
+            //インジケーター停止トリガー
+            self.listener?.isFetching(false)
             
             if let response = response {
                 self.listener?.successResponse(url: response)
@@ -32,7 +39,7 @@ final class TopPresenter {
             }else if let error = error {
                 self.listener?.errorResponse(error: error)
                 print("moyaError: \(error)")
-                error
+                
             }else {
                 print("responseとerror両方ともnil")
             }
