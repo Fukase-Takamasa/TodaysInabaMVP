@@ -11,13 +11,13 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TodaysInabaMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TodaysInabaMVP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="y3F-xl-7Vx">
-                                <rect key="frame" x="40" y="144" width="295" height="608"/>
+                                <rect key="frame" x="40" y="144" width="295" height="588"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本日の稲葉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44P-dR-4oP">
                                         <rect key="frame" x="60" y="0.0" width="175" height="45.666666666666664"/>
@@ -26,7 +26,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Uaz-B2-9Ls">
-                                        <rect key="frame" x="60" y="120.33333333333331" width="175" height="118"/>
+                                        <rect key="frame" x="60" y="110.33333333333334" width="175" height="118"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="日付" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m6g-qb-9WY">
                                                 <rect key="frame" x="0.0" y="0.0" width="175" height="34"/>
@@ -36,7 +36,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="お名前" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uOk-kC-RUS">
-                                                <rect key="frame" x="0.0" y="84" width="175" height="34"/>
+                                                <rect key="frame" x="0.0" y="83.999999999999972" width="175" height="34"/>
                                                 <color key="backgroundColor" red="0.93726837640000005" green="0.93720704320000003" blue="0.94117814300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="textColor" red="0.32386934760000002" green="0.66626816990000004" blue="0.70590633150000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -48,7 +48,7 @@
                                         </constraints>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inaba" translatesAutoresizingMaskIntoConstraints="NO" id="otl-JY-Lzc">
-                                        <rect key="frame" x="0.0" y="313" width="295" height="295"/>
+                                        <rect key="frame" x="0.0" y="293" width="295" height="295"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="otl-JY-Lzc" secondAttribute="height" multiplier="1:1" id="KVc-wU-dys"/>
                                         </constraints>
@@ -68,6 +68,9 @@
                                 <state key="normal" title="稲葉の履歴">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedHistoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LQQ-cf-NwD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -78,12 +81,11 @@
                             <constraint firstItem="4ib-Ag-X9Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2kr-n7-cGj"/>
                             <constraint firstItem="y3F-xl-7Vx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="BKQ-RZ-AKQ"/>
                             <constraint firstAttribute="trailing" secondItem="y3F-xl-7Vx" secondAttribute="trailing" constant="40" id="fgD-TX-KY0"/>
-                            <constraint firstAttribute="bottom" secondItem="y3F-xl-7Vx" secondAttribute="bottom" constant="60" id="xdF-rz-frE"/>
+                            <constraint firstAttribute="bottom" secondItem="y3F-xl-7Vx" secondAttribute="bottom" constant="80" id="xdF-rz-frE"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dateTextField" destination="m6g-qb-9WY" id="byn-nR-KiT"/>
-                        <outlet property="historyBotton" destination="4ib-Ag-X9Q" id="dIJ-ww-eEq"/>
                         <outlet property="nameTextField" destination="uOk-kC-RUS" id="k1L-bH-se4"/>
                     </connections>
                 </viewController>
@@ -93,7 +95,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="inaba" width="600" height="480"/>
+        <image name="inaba" width="512" height="410"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
