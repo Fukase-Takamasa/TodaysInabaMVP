@@ -19,7 +19,6 @@ class ViewController: UIViewController, StoryboardInstantiatable {
     
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var historyButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +32,7 @@ class ViewController: UIViewController, StoryboardInstantiatable {
     
     
     @IBAction func tappedHistoryButton(_ sender: Any) {
+        //UIKit上からSwiftUIViewをモーダル表示
         self.present(UIHostingController(rootView: HistoryView()), animated: true, completion: nil)
     }
     
@@ -72,8 +72,10 @@ extension ViewController: TopPresenterInterface {
     func successResponse(url: String) {
         let vc = ResultViewController.instantiate()
         vc.viewModel = ResultViewModel(resultImageUrl: url)
-        vc.modalPresentationStyle = .overCurrentContext
-        self.present(vc, animated: true)
+//        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true) {
+            self.nameTextField.text = ""
+        }
     }
     
     func errorResponse(error: Error) {
